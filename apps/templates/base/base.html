@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Piolin - {% block title %}{% endblock %}</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="{% static 'styles/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="{% static 'bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="{% static 'font-awesome/css/all.min.css' %}" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  {% block style_sheet %}{% endblock %}
+  <style></style>
+</head>
+<body>
+  {% include 'base/nav.html' %}
+  {% block content %}{% endblock %}
+  {% include 'base/footer.html' %}
+
+  <!-- Main JS -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="{% static 'styles/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  {% block js %}{% endblock %}
+</body>
+</html>

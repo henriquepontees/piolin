@@ -1,0 +1,34 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block style_sheet %}  
+  <link href="{% static 'css/home.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <section class="container my-5 home">
+    <!-- Título centralizado -->
+    <div class="text-center my-4">
+        <h4 class="section-title">PROJETOS</h4>
+    </div>
+    
+    <!-- Grid para os cards -->
+    <div class="row">
+      {% for projeto in projetos %}
+      <div class="col-md-4 mb-4">
+        <div class="card text-white">
+          <img src="{{ projeto.imagem.url }}" class="card-img img-overlay" alt="{{ project.title }}">
+          <div class="card-img-overlay">
+            <h5 class="card-title">{{ projeto.titulo }}</h5>
+            <p class="card-text">{{ projeto.descricao }}</p>
+          </div>
+        </div>
+      </div>
+      {% if forloop.counter|divisibleby:3 and not forloop.last %}
+    </div>
+    <div class="row">
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}
+

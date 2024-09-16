@@ -1,0 +1,31 @@
+  .container.my-5.home{
+    font-family: 'Poppins', sans-serif;
+  }
+
+.section-title {
+    font-size: 5rem; /* Ajuste para o tamanho desejado */
+    font-weight: bold;
+    color: #e73a23; /* Ajuste a cor se necessário */
+  }
+
+.card-img {
+    height: 200px; /* Ajuste a altura desejada */
+    object-fit: cover;
+    opacity: 0.6; /* Transparência da imagem de fundo */
+  }
+  
+  .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semitransparente no texto */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  

@@ -10,14 +10,13 @@
     <div class="text-center my-4">
         <h4 class="section-title">PROJETOS</h4>
     </div>
-    
     <!-- Grid para os cards -->
     <div class="row">
       {% for projeto in projetos %}
       <div class="col-md-4 mb-4">
         <div class="card text-white">
           <img src="{{ projeto.imagem.url }}" class="card-img img-overlay" alt="{{ project.title }}">
-          <div class="card-img-overlay">
+          <div class="card-img-overlay">  
             <h5 class="card-title">{{ projeto.titulo }}</h5>
             <p class="card-text">{{ projeto.descricao }}</p>
           </div>

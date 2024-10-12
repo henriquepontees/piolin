@@ -2,4 +2,7 @@ django
 django-jazzmin
 pillow
 django-bootstrap5
-
+asgiref
+sqlparse
+tzdata
+typing-extensions

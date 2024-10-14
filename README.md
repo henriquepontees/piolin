@@ -17,6 +17,11 @@ Certifique-se de que os seguintes programas estejam instalados em sua máquina:
     git clone https://github.com/henriquepontees/piolin.git
     cd piolin
     ```
+    **Criando ambiente virtual**:
+
+    ```bash
+    python -m venv venv
+    venv\Scripts\activate
 
 2. **Instale as dependências**:
 

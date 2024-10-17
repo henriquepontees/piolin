@@ -1,14 +1,31 @@
-  .container.my-5.home{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.container.my-5.home{
     font-family: 'Poppins', sans-serif;
+
   }
 
-.section-title {
-    font-size: 5rem; /* Ajuste para o tamanho desejado */
+.section-title-1 {
+    font-size: 88px; /* Ajuste para o tamanho desejado */
     font-weight: 900;
     color: #e73a23; /* Ajuste a cor se necessário */
+    font-family: "Poppins", sans-serif;
   }
 
-  .card-img {
+  .section-title-2 {
+    font-size: 88px; /* Ajuste para o tamanho desejado */
+    font-weight: 900;
+    color: #e73a23; /* Ajuste a cor se necessário */
+    font-family: "Poppins", sans-serif;
+    padding: 100px;
+  }
+
+.section-4-home{
+  margin-bottom: 200px;
+}
+
+
+  .img-overlay {
     height: 100%; /* Altura desejada */
     width: 100%; /* Para garantir que a imagem ocupe toda a largura do card */
     object-fit: cover;
@@ -29,16 +46,14 @@
 }
 
   
-  .card-title {
+  .title-card-projetos-home {
     font-size: 1.5rem;
     font-weight: 600;
-  }
-  
-  .card-text {
-    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
   }
 
-  .card {
+  .card-projetos-home {
+    margin-top: 10% !important;
     padding: 0;
     margin: auto; /* Centraliza o card horizontalmente */
     height: 300px;
@@ -47,7 +62,7 @@
     overflow: hidden;
 }
 
-.card-text {
+.text-card-projetos-home {
   font-size: 1rem;
   word-wrap: break-word; /* Quebra o texto se ele for muito longo para uma linha */
   white-space: normal;   /* Permite que o texto quebre em várias linhas */
@@ -58,5 +73,159 @@
   -webkit-box-orient: vertical; /* Define a orientação da caixa */
   max-height: 6em; /* Ajuste de altura máximo para 4 linhas de texto */
   line-height: 1.5em; /* Espaçamento entre as linhas */
+  font-family: "Poppins", sans-serif;
 }
 
+.section-1-home {
+  background-color: white;
+  padding-left: 5%;
+  padding-top: 3%;
+}
+
+.section-3-home {
+  background-color: white;
+  padding: 5%;
+}
+
+.title-1-home {
+  font-family: "Poppins", sans-serif;
+  color: #e73a23; /* Ajuste a cor se necessário */
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 79px;
+}
+
+.p-1-home{
+  color: rgb(45, 111, 81);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 4px;
+  font-family: "Poppins", sans-serif;
+}
+
+.p-2-home{
+  color: rgb(45, 111, 81);
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 100px;
+  font-family: "Poppins", sans-serif;
+}
+
+.text-2-home{
+  color: rgb(45, 111, 81);
+  font-weight:500;
+  font-size: 80px;
+}
+
+.pix-home{
+  padding-right: 100px;
+}
+
+.p-3-home{
+  color: rgb(45, 111, 81);
+  font-weight:400;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.section-2-home {
+  background-color: #7846ad;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding-left: 5%;
+  padding-bottom: 3.5% !important;
+}
+
+.text-1-home{
+  font-size: 23px;
+  font-family: "Poppins", sans-serif;
+  line-height: 30px;
+}
+
+.button-1-home{
+  margin-top: 5%;
+  margin-bottom: 15%;
+  padding-top: 2.1%;
+  width: 35%;
+  height: 18%;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-left: 2%;
+}
+
+.title-2-home{
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+  color: rgb(45, 111, 81);
+  font-size: 88px;
+}
+
+.palhaco-home-div{
+  margin-bottom: 6px;
+}
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item > div {
+    flex: 0 0 20%; /* Ajuste para que cada item ocupe 20% da largura */
+  }
+
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(20%); /* Ajuste para considerar 5 itens */
+  }
+
+  .carousel-inner .carousel-item-start.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-20%); /* Ajuste para considerar 5 itens */
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+
+/* Ajuste das setas de controle */
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+  left: -4%; /* Aumente o valor negativo para afastar mais da borda esquerda */
+}
+
+.carousel-control-next {
+  right: -4%; /* Aumente o valor negativo para afastar mais da borda direita */
+}
+
+.carousel-inner .card-img img {
+  width: 100%; /* Ajuste para a largura total do contêiner */
+  height: 200px; /* Defina a altura fixa desejada */
+  object-fit: cover; /* Faz com que a imagem seja recortada para caber na área definida */
+  border: none; /* Remove qualquer borda da imagem */
+  box-shadow: none; /* Remove qualquer sombra que possa parecer uma borda */
+}
+
+.carousel-inner .card {
+  border: none; /* Remove qualquer borda do card */
+  box-shadow: none; /* Remove qualquer sombra do card */
+}

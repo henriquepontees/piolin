@@ -7,5 +7,6 @@ def home(request):
   template = loader.get_template('pages/home.html')
   context = {
              'projetos': Projetos.objects.all(),
+             'parceiros': Parceiros.objects.all(),
             }
   return HttpResponse(template.render(context, request))

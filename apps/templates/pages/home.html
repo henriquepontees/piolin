@@ -5,20 +5,48 @@
 {% endblock %}
 
 {% block content %}
+
+  <!-- Primeira seção com layout grid -->
+  <section class="container-fluid section-1-home">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-left justify-content-left">
+        <div class="text-left">
+          <h2 class="mb-4 text-nowrap title-1-home">Piollin, nosso <br> Centro Cultural!</h2>
+          <p class="p-1-home">CULTURA • ARTE • SABOR • AFETO</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex align-items-center justify-content-center palhaco-home-div">
+        <img src="{% static 'images/palhaco-home.svg' %}" class="img-fluid img-1-home" alt="exemplo">
+      </div>
+    </div>
+  </section>
+  <!-- Segunda seção com layout grid -->
+  <section class="container-fluid py-5 section-2-home">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-left justify-content-left">
+        <div class="text-1-home text-nowrap">
+          <p>Conheça a missão de promover a arte e a<br>cultura para jovens. Transforme vidas e<br>inspire futuras gerações junte-se a nós.</p>
+          <a href="#" class="btn btn-warning button-1-home text-center">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Projetos existente -->
   <section class="container my-5 home">
     <!-- Título centralizado -->
     <div class="text-center my-4">
-        <h4 class="section-title">PROJETOS</h4>
+        <h4 class="section-title-1">PROJETOS</h4>
     </div>
     <!-- Grid para os cards -->
     <div class="row">
       {% for projeto in projetos %}
       <div class="col-md-4 mb-4">
-        <div class="card text-white">
-          <img src="{{ projeto.imagem.url }}" class="card-img img-overlay" alt="{{ project.title }}">
-          <div class="card-img-overlay">  
-            <h5 class="card-title">{{ projeto.titulo }}</h5>
-            <p class="card-text">{{ projeto.descricao }}</p>
+        <div class="card text-white card-projetos-home">
+          <img src="{{ projeto.imagem.url }}" class="card-img img-overlay" alt="{{ projeto.titulo }}">
+          <div class="card-img-overlay ">  
+            <h5 class="card-title title-card-projetos-home">{{ projeto.titulo }}</h5>
+            <p class="card-text text-card-projetos-home">{{ projeto.descricao }}</p>
           </div>
         </div>
       </div>
@@ -29,5 +57,80 @@
       {% endfor %}
     </div>
   </section>
-{% endblock %}
 
+<!-- Seção de Noticias com layout grid -->
+<section class="container-fluid py-5 section-3-home">
+  <div class="row">
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+      <video class="img-fluid video-1-home" autoplay loop muted controls>
+        <source src="{% static 'videos/video-home.mp4' %}" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content-left">
+      <div class="text-left">
+        <h2 class="mb-4 title-2-home">NOTICIAS</h2>
+        <div class="d-flex justify-content-center">
+          <a href="#" class="btn btn-warning button-1-home">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Seção de Parceiros existente -->
+  <section class="container section-4-home">
+    <!-- Título centralizado -->
+    <div class="text-center my-4">
+        <h4 class="section-title-2">PARCEIROS</h4>
+    </div>
+    <div class="row mx-auto my-auto justify-content-center">
+        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-theme="dark">
+            <div class="carousel-inner" role="listbox">
+                {% for parceiro in parceiros %}
+                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="{{ parceiro.imagem.url }}" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Ultima seção com layout grid -->
+<section class="container-fluid section-1-home">
+  <div class="row">
+    <div class="col-md-6 d-flex align-items-end justify-content-end pix-home">
+      <div class="text-center">
+        <img src="{% static 'images/qrcode-piolin.png' %}" class="img-fluid img-1-home" alt="exemplo">
+        <p class="mt-3 p-2-home">CHAVE PIX: (00)00000-0000</p>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex align-items-left justify-content-left">
+      <div class="text-left">
+        <h2 class="mb-4 text-nowrap text-2-home">DOE<br>AGORA!</h2>
+        <p class="p-3-home">Sua contribuição ajuda a promover <br> a arte e a cultura para jovens. <br> Junte-se ao Piollin e faça parte <br> dessa transformação. <br> 
+          Facilite na chave PIX ao lado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+{% endblock %}

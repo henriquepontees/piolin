@@ -10,3 +10,15 @@ class Projetos(models.Model):
 
     def __str__(self):
         return self.titulo
+    
+class Parceiros(models.Model):
+    imagem = models.ImageField(upload_to='parceiros')
+    nome = models.CharField(max_length=100)
+    descricao = models.TextField()
+    link = models.URLField(max_length=200)
+
+    class Meta:
+        verbose_name_plural = "Adicionar Parceiro"
+
+    def __str__(self):
+        return self.nome

@@ -22,3 +22,13 @@ class Parceiros(models.Model):
 
     def __str__(self):
         return self.nome
+    
+class ChavesPix(models.Model):
+    qrcode = models.ImageField(upload_to='chavepix')
+    chave = models.CharField(max_length=100, blank=True )
+
+    class Meta:
+        verbose_name_plural = "Adicionar Chave Pix"
+
+    def __str__(self):
+        return self.chave

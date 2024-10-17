@@ -115,8 +115,10 @@
   <div class="row">
     <div class="col-md-6 d-flex align-items-end justify-content-end pix-home">
       <div class="text-center">
-        <img src="{% static 'images/qrcode-piolin.png' %}" class="img-fluid img-1-home" alt="exemplo">
-        <p class="mt-3 p-2-home">CHAVE PIX: (00)00000-0000</p>
+        {% for chave in pix %}
+        <img src="{{ chave.qrcode.url }}" class="img-fluid img-1-home" alt="exemplo">
+        <p class="mt-3 p-2-home">CHAVE PIX: {{ chave.chave }}</p>
+        {% endfor %}
       </div>
     </div>
     <div class="col-md-6 d-flex align-items-left justify-content-left">

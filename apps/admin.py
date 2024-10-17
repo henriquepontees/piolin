@@ -4,3 +4,4 @@ from .models import *
 
 admin.site.register(Projetos)
 admin.site.register(Parceiros)
+admin.site.register(ChavesPix)

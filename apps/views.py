@@ -8,5 +8,6 @@ def home(request):
   context = {
              'projetos': Projetos.objects.all(),
              'parceiros': Parceiros.objects.all(),
+             'pix': ChavesPix.objects.all(),
             }
   return HttpResponse(template.render(context, request))

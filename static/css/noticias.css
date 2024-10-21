@@ -45,10 +45,19 @@ body {
     justify-content: center; /* Centraliza horizontalmente, caso necessário */
 }
 
-.noticias-content{
+.noticias-content {
     display: flex;
     flex-direction: column;
     height: 200px;
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */
+    text-overflow: ellipsis; /* Adiciona reticências (...) para indicar texto cortado */
+}
+
+.noticias-card-text {
+    flex-grow: 1; /* Faz o texto ocupar o máximo de espaço possível sem ultrapassar o card */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */
+    text-overflow: ellipsis; /* Adiciona reticências (...) se o texto for muito longo */
+    white-space: normal;
 }
 
 .noticias-card-title {
@@ -59,7 +68,3 @@ body {
 }
 
 
-.noticias-card-text{
-    padding-bottom: 20px;
-    font-size: 16px;
-}

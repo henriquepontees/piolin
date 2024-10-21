@@ -6,5 +6,6 @@ from .views import *
 
 urlpatterns = [
     path('', home, name='index'),
+    path('noticias/', noticias, name='noticias'),
     ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

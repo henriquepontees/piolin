@@ -11,3 +11,9 @@ def home(request):
              'pix': ChavesPix.objects.all(),
             }
   return HttpResponse(template.render(context, request))
+
+def noticias(request):
+  template = loader.get_template('pages/noticias.html')
+  context = {
+            }
+  return HttpResponse(template.render(context, request))

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.main-title {
+    text-align: center;
+    color: #2d6f51;
+    font-size: 66px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+.main-title i {
+    margin-left: 30px;
+}
+.container-pg-noticias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card-pg-noticias {
+    background-color: #e73a23;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.noticias-img {
+    height: 100%; /* Ajuste a altura conforme necessário */
+    width: 90%; /* Garante que a largura ocupe todo o espaço da coluna */
+    object-fit: fill; /* Mantém a proporção da imagem */
+    padding: 20px 8px 20px 8px !important;
+}
+
+.card-pg-noticias .col-md-4 {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente a imagem */
+    justify-content: center; /* Centraliza horizontalmente, caso necessário */
+}
+
+.noticias-content{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+}
+
+.noticias-card-title {
+    margin-top: 10px;
+    font-size: 44px;
+    font-weight: 700;
+    color: #ffffff; /* Mantém a cor do título */
+}
+
+
+.noticias-card-text{
+    padding-bottom: 20px;
+    font-size: 16px;
+}

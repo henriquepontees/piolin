@@ -9,76 +9,54 @@
   <div class="main-title">NOTÍCIAS<i class="fas fa-bullhorn"></i></div>
 
   <div class="container container-pg-noticias">
+
     <div class="row">
+      {% for noticia in noticias %}
         <div class="col-md-6 mb-4 card-noticias-container">
+          <a href="{% url 'noticia' noticia_id=noticia.id %}">
             <div class="card card-pg-noticias">
               <div class="row g-0">
                 <div class="col-md-4">
                   <img 
                     alt="News image" 
-                    src="https://storage.googleapis.com/a1aa/image/dbvItdRPaQKHCZVhpObTT4aM8GS5T8u8L9FOyhlBUJG0fF0JA.jpg" 
+                    src="{{ noticia.imagem.url }}" 
                     class="img-fluid noticias-img"
                   />
                 </div>
                 <div class="col-md-8">
                   <div class="card-body noticias-content">
-                    <h2 class="card-title noticias-card-title">TÍTULO</h2>
-                    <p class="card-text noticias-card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan tortor. Curabitur venenatis arcu at mi auctor, in varius nunc molestie.
-                    </p>
+                    <h2 class="card-title noticias-card-title">{{noticia.titulo}}</h2>
+                    <p class="card-text noticias-card-text"> {{noticia.descricao}} </p>
                   </div>
                 </div>
               </div>
             </div>
+          </a>
           </div>
-          
-
-          <div class="col-md-6 mb-4 card-noticias-container">
-            <div class="card card-pg-noticias">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img 
-                    alt="News image" 
-                    src="https://storage.googleapis.com/a1aa/image/dbvItdRPaQKHCZVhpObTT4aM8GS5T8u8L9FOyhlBUJG0fF0JA.jpg" 
-                    class="img-fluid noticias-img"
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body noticias-content">
-                    <h2 class="card-title noticias-card-title">TÍTULO</h2>
-                    <p class="card-text noticias-card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan tortor. Curabitur venenatis arcu at mi auctor, in varius nunc molestie.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-
-          <div class="col-md-6 mb-4 card-noticias-container">
-            <div class="card card-pg-noticias">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img 
-                    alt="News image" 
-                    src="https://storage.googleapis.com/a1aa/image/dbvItdRPaQKHCZVhpObTT4aM8GS5T8u8L9FOyhlBUJG0fF0JA.jpg" 
-                    class="img-fluid noticias-img"
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body noticias-content">
-                    <h2 class="card-title noticias-card-title">TÍTULO</h2>
-                    <p class="card-text noticias-card-text">
-                      Lorem iaaaaapsum dolor adsddasa sit amet, consectetur adipiscing elit. Quisque sit amet accumsan tortor. Curabitur venenatis arcu at mi auctor, in varius nunc molestie.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
+        </div>
     </div>
-    
+    <div class="pagination-container">
+      <nav aria-label="Navegação">
+        <ul class="pagination justify-content-center">
+          <li class="page-item {% if not noticias.has_previous %}disabled{% endif %}">
+            <a class="page-link" href="?page={{ previous_page }}" aria-label="Anterior">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          {% for num in noticias.paginator.page_range %}
+            <li class="page-item {% if noticias.number == num %}active{% endif %}">
+              <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+            </li>
+          {% endfor %}
+          <li class="page-item {% if not noticias.has_next %}disabled{% endif %}">
+            <a class="page-link" href="?page={{ next_page }}" aria-label="Próximo">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 
 {% endblock %}

@@ -69,4 +69,7 @@ body {
     color: #ffffff; /* Mantém a cor do título */
 }
 
-
+a{
+    text-decoration:none;
+    border: none;
+}

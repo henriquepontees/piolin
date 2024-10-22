@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{
+  font-family: "Poppins", sans-serif;
+}
+
+.news-container {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  width: 70%;
+}
+
+.news-image {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 380px;
+  height: 300px;
+}
+
+.news-text {
+  /* Remova o padding-right para permitir que o texto flua ao redor da imagem */
+}
+
+.news-title {
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #e73a23;
+}
+
+.news-content {
+  font-size: 18px;
+  line-height: 1.6;
+}

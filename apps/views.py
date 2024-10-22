@@ -12,3 +12,22 @@ def home(request):
              "eventos": Eventos.objects.all(),
             }
   return HttpResponse(template.render(context, request))
+
+def noticias(request):
+  template = loader.get_template('pages/noticias.html')
+  context = {
+            }
+  return HttpResponse(template.render(context, request))
+
+
+def noticia(request):
+  template = loader.get_template('pages/noticia.html')
+  context = {
+            }
+  return HttpResponse(template.render(context, request))
+
+def eventos(request):
+  template = loader.get_template('pages/eventos.html')
+  context = {
+            }
+  return HttpResponse(template.render(context, request))

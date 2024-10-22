@@ -1,0 +1,86 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block style_sheet %}  
+  <link href="{% static 'css/noticias.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+  <div class="main-title">NOTÍCIAS<i class="fas fa-bullhorn"></i></div>
+
+  <div class="container container-pg-noticias">
+    <div class="row">
+        <div class="col-md-6 mb-4 card-noticias-container">
+            <div class="card card-pg-noticias">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img 
+                    alt="News image" 
+                    src="https://storage.googleapis.com/a1aa/image/dbvItdRPaQKHCZVhpObTT4aM8GS5T8u8L9FOyhlBUJG0fF0JA.jpg" 
+                    class="img-fluid noticias-img"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body noticias-content">
+                    <h2 class="card-title noticias-card-title">TÍTULO</h2>
+                    <p class="card-text noticias-card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan tortor. Curabitur venenatis arcu at mi auctor, in varius nunc molestie.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="col-md-6 mb-4 card-noticias-container">
+            <div class="card card-pg-noticias">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img 
+                    alt="News image" 
+                    src="https://storage.googleapis.com/a1aa/image/dbvItdRPaQKHCZVhpObTT4aM8GS5T8u8L9FOyhlBUJG0fF0JA.jpg" 
+                    class="img-fluid noticias-img"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body noticias-content">
+                    <h2 class="card-title noticias-card-title">TÍTULO</h2>
+                    <p class="card-text noticias-card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan tortor. Curabitur venenatis arcu at mi auctor, in varius nunc molestie.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="col-md-6 mb-4 card-noticias-container">
+            <div class="card card-pg-noticias">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img 
+                    alt="News image" 
+                    src="https://storage.googleapis.com/a1aa/image/dbvItdRPaQKHCZVhpObTT4aM8GS5T8u8L9FOyhlBUJG0fF0JA.jpg" 
+                    class="img-fluid noticias-img"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body noticias-content">
+                    <h2 class="card-title noticias-card-title">TÍTULO</h2>
+                    <p class="card-text noticias-card-text">
+                      Lorem iaaaaapsum dolor adsddasa sit amet, consectetur adipiscing elit. Quisque sit amet accumsan tortor. Curabitur venenatis arcu at mi auctor, in varius nunc molestie.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+      <!-- Copie e cole mais blocos de 'col-md-6 mb-4' para adicionar mais cards -->
+    </div>
+  </div>
+
+{% endblock %}

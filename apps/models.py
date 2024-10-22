@@ -10,6 +10,7 @@ class Projetos(models.Model):
 
     def __str__(self):
         return self.titulo
+
     
 class Parceiros(models.Model):
     imagem = models.ImageField(upload_to='parceiros')
@@ -32,6 +33,7 @@ class ChavesPix(models.Model):
 
     def __str__(self):
         return self.chave
+
     
 class Noticias(models.Model):
     imagem = models.ImageField(upload_to='parceiros')

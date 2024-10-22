@@ -10,6 +10,7 @@ def home(request):
              'projetos': Projetos.objects.all(),
              'parceiros': Parceiros.objects.all(),
              'pix': ChavesPix.objects.all(),
+             "eventos": Eventos.objects.all(),
             }
   return HttpResponse(template.render(context, request))
 

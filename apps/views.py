@@ -17,3 +17,9 @@ def noticias(request):
   context = {
             }
   return HttpResponse(template.render(context, request))
+
+def eventos(request):
+  template = loader.get_template('pages/eventos.html')
+  context = {
+            }
+  return HttpResponse(template.render(context, request))

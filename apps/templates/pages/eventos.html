@@ -1,0 +1,47 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block style_sheet %}  
+  <link href="{% static 'css/eventos.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="container text-center">
+    <h1 class="h1-eventos">EVENTOS</h1>
+    <div class="row">
+      <div class="col">
+        <div class="card card-eventos" style="width: 18rem;">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202405/2306/e940c07107a4cefbbedbbd53451e26f0dbf292dcfab6c307.png" class="card-img-top-1" alt="goku">
+            <div class="card-body eventos-card-body">
+                <h5 class="card-title eventos-card-title">CARD TITLE</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sequi accusamus saepe maiores fuga laborum maxime sit dolorum eaque iure ipsum, soluta illum sint et reprehenderit, in vitae laudantium vero?</p>
+            </div>
+         </div>
+         <div class="card card-eventos" style="width: 18rem;">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202405/2306/e940c07107a4cefbbedbbd53451e26f0dbf292dcfab6c307.png" class="card-img-top-1" alt="...">
+            <div class="card-body eventos-card-body">
+                <h5 class="card-title eventos-card-title">CARD TITLE</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sequi accusamus saepe maiores fuga laborum maxime sit dolorum eaque iure ipsum, soluta illum sint et reprehenderit, in vitae laudantium vero?</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card card-eventos" style="width: 18rem;">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202405/2306/e940c07107a4cefbbedbbd53451e26f0dbf292dcfab6c307.png" class="card-img-top-2" alt="...">
+            <div class="card-body eventos-card-body">
+                <h5 class="card-title eventos-card-title">CARD TITLE</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sequi accusamus saepe maiores fuga laborum maxime sit dolorum eaque iure ipsum, soluta illum sint et reprehenderit, in vitae laudantium vero?</p>
+            </div>
+        </div>
+        <div class="card card-eventos" style="width: 18rem;">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202405/2306/e940c07107a4cefbbedbbd53451e26f0dbf292dcfab6c307.png" class="card-img-top-2" alt="...">
+            <div class="card-body eventos-card-body">
+                <h5 class="card-title eventos-card-title">CARD TITLE</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sequi accusamus saepe maiores fuga laborum maxime sit dolorum eaque iure ipsum, soluta illum sint et reprehenderit, in vitae laudantium vero?</p>
+        </div>
+        </div>
+      </div>
+      </div>
+      </div>
+
+{% endblock %}

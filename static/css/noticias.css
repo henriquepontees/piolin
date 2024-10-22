@@ -11,8 +11,9 @@ body {
     text-align: center;
     color: #2d6f51;
     font-size: 66px;
-    margin-top: 20px;
+    margin-top: 70px;
     font-weight: 700;
+    margin-bottom: 50px;
 }
 .main-title i {
     margin-left: 30px;
@@ -58,6 +59,7 @@ body {
     overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */
     text-overflow: ellipsis; /* Adiciona reticências (...) se o texto for muito longo */
     white-space: normal;
+    font-size: 14px;
 }
 
 .noticias-card-title {

@@ -47,3 +47,16 @@ class Noticias(models.Model):
 
     def __str__(self):
         return self.titulo
+    
+class Eventos(models.Model):
+    imagem = models.ImageField(upload_to='parceiros')
+    titulo = models.CharField(max_length=100)
+    descricao = models.TextField()
+    data = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = "Adicionar Evento"
+        ordering = ['-data']
+
+    def __str__(self):
+        return self.titulo

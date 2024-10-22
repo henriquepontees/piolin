@@ -10,7 +10,6 @@ def home(request):
              'projetos': Projetos.objects.all(),
              'parceiros': Parceiros.objects.all(),
              'pix': ChavesPix.objects.all(),
-             "eventos": Eventos.objects.all(),
             }
   return HttpResponse(template.render(context, request))
 
@@ -46,5 +45,6 @@ def noticia(request, noticia_id):
 def eventos(request):
   template = loader.get_template('pages/eventos.html')
   context = {
+     'eventos': Eventos.objects.all(),
             }
   return HttpResponse(template.render(context, request))

@@ -21,10 +21,6 @@ body{
   height: 300px;
 }
 
-.news-text {
-  /* Remova o padding-right para permitir que o texto flua ao redor da imagem */
-}
-
 .news-title {
   font-size: 27px;
   font-weight: 700;

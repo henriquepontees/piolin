@@ -11,16 +11,13 @@
       <div class="col-md-12">
         <div class="news-container">
           <img 
-            src="https://image.api.playstation.com/vulcan/ap/rnd/202405/2306/e940c07107a4cefbbedbbd53451e26f0dbf292dcfab6c307.png" 
+            src="{{ noticia.imagem.url }}" 
             alt="News image" 
             class="img-fluid news-image"
           />
           <div class="news-text">
-            <h1 class="news-title">TITULO DA NOTICIA</h1>
-            <p class="news-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan tortor. Curabitur venenatis arcu at mi auctor, in varius nunc molestie. Nulla facilisi. Nam vestibulum augue sit amet urna feugiat, a sodales lorem porttitor. Aliquam erat volutpat. Donec faucibus libero sed nisl fermentum maximus. Suspendisse viverra eget augue at facilisis. Suspendisse potenti. Nullam euismod mauris ut ante laoreet, eget lobortis sapien eleifend. In hac habitasse platea dictumst.
-              Duis dictum auctor tortor. Fusce euismod vulputate orci, id bibendum velit gravida sed. Ut a libero libero. Cras vitae diam turpis. Aliquam erat volutpat. Ut aliquam eu lectus sit amet ornare. Suspendisse suscipit neque ut arcu venenatis, a placerat enim bibendum. Vivamus vestibulum eros eu orci convallis lobortis. Aenean sollicitudin risus vel risus vehicula, quis dapibus orci viverra. Vestibulum fermentum tincidunt arcu, at vehicula libero consequat vel.
-            </p>
+            <h1 class="news-title"> {{ noticia.titulo }} </h1>
+            <p class="news-content"> {{ noticia.descricao }} </p>
           </div>
         </div>
       </div>

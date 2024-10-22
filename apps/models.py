@@ -34,13 +34,16 @@ class ChavesPix(models.Model):
     def __str__(self):
         return self.chave
 
-class Eventos(models.Model):
-    data = models.DateField()
-    titulo = models.CharField(max_length=100, blank=True )
+    
+class Noticias(models.Model):
+    imagem = models.ImageField(upload_to='parceiros')
+    titulo = models.CharField(max_length=100)
     descricao = models.TextField()
+    data = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name_plural = "Eventos"
+        verbose_name_plural = "Adicionar Notícia"
+        ordering = ['-data']
 
     def __str__(self):
         return self.titulo
